@@ -40,4 +40,3 @@ Route::get('informative/detail/{id}', [DetailInformativeController::class, 'show
 Route::post('informative/detail', [DetailInformativeController::class, 'store']);
 Route::put('informative/detail/{id}', [DetailInformativeController::class, 'update']);
 Route::delete('informative/detail/{id}', [DetailInformativeController::class, 'destroy']);
-Route::get('informative/detail', [DetailInformativeController::class, 'index']);
