@@ -13,6 +13,7 @@
         <div class="d-flex justify-content-center align-items-center" style="min-height: 80vh;">
           <div class="d-grid gap-2 col-6">
             <a href="/api/gallery" class="btn btn-success" target="_blank">Gallery</a>
+            <a href="/api/quiz" class="btn btn-primary" target="_blank">Quiz</a>
             <a href="/api/informative" class="btn btn-danger" target="_blank">Informative</a>
             <b>for detail informative use endpoint <code> /detail/{id}</code></b>
             
