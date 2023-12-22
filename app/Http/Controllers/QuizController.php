@@ -29,6 +29,7 @@ class QuizController extends Controller
         // Validasi request
         $validatedData = $request->validate([
             'question' => 'required|string',
+            'category' => 'required|string',
             'options' => 'required|array|min:2', 
             'options.*.text' => 'required|string',
             'options.*.isCorrect' => 'required|boolean',
@@ -36,6 +37,7 @@ class QuizController extends Controller
 
         $quiz = Quiz::create([
             'question' => $validatedData['question'],
+            'category' => $validatedData['category'],
         ]);
 
         foreach ($validatedData['options'] as $option) {
