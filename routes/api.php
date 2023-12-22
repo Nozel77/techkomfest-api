@@ -3,6 +3,7 @@
 use App\Http\Controllers\Api\DetailInformativeController;
 use App\Http\Controllers\Api\GalleryController;
 use App\Http\Controllers\Api\InformativeController;
+use App\Http\Controllers\QuizController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -40,3 +41,10 @@ Route::get('informative/detail/{id}', [DetailInformativeController::class, 'show
 Route::post('informative/detail', [DetailInformativeController::class, 'store']);
 Route::put('informative/detail/{id}', [DetailInformativeController::class, 'update']);
 Route::delete('informative/detail/{id}', [DetailInformativeController::class, 'destroy']);
+
+//route api quiz
+Route::get('/quiz', [QuizController::class, 'index']); 
+Route::post('/quiz', [QuizController::class, 'store']);
+Route::get('/quiz/{quiz}', [QuizController::class, 'show']); 
+Route::put('/quiz/{quiz}', [QuizController::class, 'update']);
+Route::delete('/quiz/{quiz}', [QuizController::class, 'destroy']); 

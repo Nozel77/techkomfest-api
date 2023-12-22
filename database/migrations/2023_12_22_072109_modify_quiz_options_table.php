@@ -13,13 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('detail_informatives', function (Blueprint $table) {
-            $table->string('province');
-            $table->text('history');
-            $table->text('geography');
-            $table->text('demographics');
-            $table->text('artculture');
-            $table->text('detail_description');
+        Schema::table('quiz_options', function (Blueprint $table) {
+            $table->dropTimestamps();
         });
     }
 
